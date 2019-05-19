@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         id="WebApp_ID" version="3.1">
+    <display-name>customer-web-app-spring-mvc-hibernate</display-name>
+
+    <absolute-ordering />
+
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/dispatcher-servlet.xml</param-value> <!-- Refers to your servlet xml config -->
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>
+
+<!--
+In IntelliJ, there's one extra step for adding a the libraries, go to "File" -> "Project Structure" -> "Problems" and fix the artifacts.
+We also need to include those extra files that we've added (Hibernate, Spring MVC, MySQL Connector...) To the .war that's being exported
+
+We can check what artifacts are being exported in the ".idea" folder "artifacts"
+ -->

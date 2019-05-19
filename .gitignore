@@ -1,0 +1,6 @@
+# IntelliJ
+.idea/
+out/
+
+# Sensitive information
+web/WEB-INF/dispatcher-servlet.xml
