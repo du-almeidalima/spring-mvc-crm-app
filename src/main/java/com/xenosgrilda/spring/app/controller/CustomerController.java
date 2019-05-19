@@ -1,4 +1,4 @@
-package com.xenosgrilda.crudapp.controller;
+package com.xenosgrilda.spring.app.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
