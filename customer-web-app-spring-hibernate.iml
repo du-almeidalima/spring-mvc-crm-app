@@ -31,5 +31,6 @@
     <orderEntry type="library" name="MySQL Connector" level="project" />
     <orderEntry type="library" name="Hibernate" level="project" />
     <orderEntry type="library" name="c3p0-0.9.5.3" level="project" />
+    <orderEntry type="library" name="Java Fixes" level="project" />
   </component>
 </module>
