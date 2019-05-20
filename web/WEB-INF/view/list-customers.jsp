@@ -5,50 +5,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>List Customers</title>
-    <style>
-        table {
-            width:100%;
-        }
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 15px;
-            text-align: left;
-        }
-        table#t01 tr:nth-child(even) {
-            background-color: #eee;
-        }
-        table#t01 tr:nth-child(odd) {
-            background-color: #fff;
-        }
-        table#t01 th {
-            background-color: black;
-            color: white;
-        }
-    </style>
-
+    <title>My Spring CRM</title>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/static/css/style.css">
 </head>
 <body>
-    <h1>CRM - Customer Relationship Managemer </h1>
+    <div class="container">
 
-    <table>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-        </tr>
-        <c:forEach var="customer" items="${customers}">
-            <tr>
-                <td>${customer.firstName}</td>
-                <td>${customer.lastName}</td>
-                <td>${customer.email}</td>
-            </tr>
-        </c:forEach>
-    </table>
+        <%-- Navbar --%>
+        <nav>
+            <div class="nav-title">My Spring CRM</div>
+            <ul class="nav-group-items">
+                <li class="nav-item">About</li>
+                <li class="nav-item">Home</li>
+                <li class="nav-item">Customers</li>
+                <li class="nav-item">Something</li>
+            </ul>
+        </nav>
 
+        <h1 class="page-title">Customers</h1>
+        <hr />
+
+        <div class="app-container">
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+                <c:forEach var="customer" items="${customers}">
+                    <tr>
+                        <td>${customer.firstName}</td>
+                        <td>${customer.lastName}</td>
+                        <td>${customer.email}</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+
+    </div>
 </body>
 </html>
 
