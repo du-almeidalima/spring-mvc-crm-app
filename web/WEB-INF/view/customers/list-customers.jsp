@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<jsp:include page="templates/header.jsp" />
+<jsp:include page="../templates/header.jsp" />
 
         <h1 class="page-title">Customers</h1>
         <hr />
@@ -24,7 +24,7 @@
             </table>
         </div>
 
-<jsp:include page="templates/footer.jsp" />
+<jsp:include page="../templates/footer.jsp" />
 
 <%--
 JSTL é o acrônimo de JavaServer Pages Standard Template Library, o qual podemos usar para recuperar dados de forma
