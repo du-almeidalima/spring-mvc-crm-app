@@ -2,25 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>My Spring CRM</title>
-    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/static/css/style.css">
-</head>
-<body>
-    <div class="container">
-
-        <%-- Navbar --%>
-        <nav>
-            <div class="nav-title">My Spring CRM</div>
-            <ul class="nav-group-items">
-                <li class="nav-item">About</li>
-                <li class="nav-item">Home</li>
-                <li class="nav-item">Customers</li>
-                <li class="nav-item">Something</li>
-            </ul>
-        </nav>
+<jsp:include page="templates/header.jsp" />
 
         <h1 class="page-title">Customers</h1>
         <hr />
@@ -42,9 +24,7 @@
             </table>
         </div>
 
-    </div>
-</body>
-</html>
+<jsp:include page="templates/footer.jsp" />
 
 <%--
 JSTL é o acrônimo de JavaServer Pages Standard Template Library, o qual podemos usar para recuperar dados de forma
