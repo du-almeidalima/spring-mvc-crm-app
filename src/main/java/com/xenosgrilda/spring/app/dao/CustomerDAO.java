@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface CustomerDAO {
 
-    public List<Customer> getCustomers();
+    List<Customer> getCustomers();
 
-    public List<Customer> addCustomer();
+    void saveCustomer(Customer customer);
 }
 
 /**

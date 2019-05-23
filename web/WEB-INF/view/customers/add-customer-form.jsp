@@ -1,26 +1,29 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <jsp:include page="../templates/header.jsp" />
 
         <h1 class="page-title">Add Customer</h1>
         <hr />
 
+        <%-- We need to reference the modelAttribute that is being passed to this view in the form tag --%>
         <div class="app-container">
-            <form action="/add">
+            <form:form action="add-customer" modelAttribute="customer" method="post">
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <form:input path="firstName" type="text" id="fname" placeholder="Your name.." />
 
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <form:input path="lastName" type="text" id="lname" placeholder="Your last name.." />
 
                 <label for="lname">Email</label>
-                <input type="email" id="email" name="lastname" placeholder="Your email..">
+                <form:input path="email" type="email" id="email" placeholder="Your email.." />
 
 
                 <input type="submit" value="Submit">
-            </form>
+            </form:form>
         </div>
 
 <jsp:include page="../templates/footer.jsp" />
