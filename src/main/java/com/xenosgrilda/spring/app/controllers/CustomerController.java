@@ -17,6 +17,7 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
+
     @GetMapping("/list")
     public String listCustomers(Model model){
 
@@ -27,6 +28,13 @@ public class CustomerController {
         model.addAttribute("customers", customers);
 
         return "customers/list-customers";
+    }
+
+    @GetMapping("/add-customer-form")
+    public String addCustomer(){
+
+
+        return "customers/add-customer-form";
     }
 }
 

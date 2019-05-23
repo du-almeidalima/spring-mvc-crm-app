@@ -1,12 +1,17 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>My Spring CRM</title>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/static/css/style.css">
+    <c:if test="${fn:contains(pageContext.request.getRequestURI(), 'customer')}">
+        <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/static/css/customer.css">
+    </c:if>
+
 </head>
 <body>
     <div class="container">
