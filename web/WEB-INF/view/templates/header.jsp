@@ -8,6 +8,7 @@
 <head>
     <title>My Spring CRM</title>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/static/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <c:if test="${fn:contains(pageContext.request.getRequestURI(), 'customer')}">
         <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/static/css/customer.css">
     </c:if>

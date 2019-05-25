@@ -69,6 +69,8 @@ nav{
 /* App container*/
 .app-container{
     width: 70%;
+    max-height: 40vh;
+    overflow-y: scroll;
     position: relative;
     transform: translate(-50%, 15%);
     left: 50%;

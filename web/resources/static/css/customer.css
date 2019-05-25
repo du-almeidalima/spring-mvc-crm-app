@@ -1,15 +1,92 @@
-/* Customer Table */
-table {
-    border-collapse: collapse;
-    width: 100%;
+/* Customer Overview */
+.customer{
+    margin: 10px auto;
+    width: 90%;
+    border: 1px solid gray;
+    border-radius: 5px;
 }
 
-th, td {
-    text-align: left;
-    padding: 8px;
+.customer-header{
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
 }
 
-tr:nth-child(even) {background-color: #f2f2f2;}
+.customer-body{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+.customer-body-content{
+    margin: 18px;
+}
+
+.customer-name{
+    line-height: 30px;
+}
+
+.customer-buttons{
+    margin-left: auto;
+}
+
+button:focus {outline:0;}
+
+.btn {
+    position: relative;
+
+    width: 35px;
+    height: 30px;
+    margin: 0 5px;
+    padding: 0;
+
+    overflow: hidden;
+
+    border: solid 1px transparent;
+    border-radius: 4px;
+
+
+    transition: background-color .3s;
+
+    cursor: pointer;
+}
+
+.btn-dropdown{
+    background-color: transparent;
+}
+
+.btn-edit{
+    background-color: #ffc04c;
+    color: white;
+}
+
+.btn-edit:active,
+.btn-edit:focus{
+    background-color: #f3a616 !important;
+}
+
+.btn-edit:hover{
+    background-color: #ffcc6c;
+
+}
+
+.btn-delete{
+    background-color: #d9534f;
+    border-color:#d43f3a;
+    color: white;
+}
+
+.btn-delete:active,
+.btn-delete:focus{
+    background-color: #b6221d !important;
+}
+
+.btn-delete:hover{
+    background-color: #ce514d;
+
+}
 
 /* Customer Add Btn */
 
