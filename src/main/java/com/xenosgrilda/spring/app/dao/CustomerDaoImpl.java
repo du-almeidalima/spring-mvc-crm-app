@@ -41,6 +41,17 @@ public class CustomerDaoImpl implements CustomerDAO{
 
         session.saveOrUpdate(customer); // Basically ABAP "MODIFY"
     }
+
+    @Override
+    public void deleteCustomer(int id) {
+
+        Session session = this.sessionFactory.getCurrentSession();
+
+        Query query = session.createQuery("DELETE FROM Customer cu WHERE cu.id = :customerId")
+                .setParameter("customerId", id);
+
+        query.executeUpdate();
+    }
 }
 
 /**
