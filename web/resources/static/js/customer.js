@@ -1,3 +1,5 @@
+"use strict";
+
 const customers = document.querySelectorAll('.customer');
 
 customers.forEach(customer => {

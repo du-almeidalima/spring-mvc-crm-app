@@ -35,8 +35,6 @@
 button:focus {outline:0;}
 
 .btn {
-    position: relative;
-
     width: 35px;
     height: 30px;
     margin: 0 5px;
@@ -51,6 +49,15 @@ button:focus {outline:0;}
     transition: background-color .3s;
 
     cursor: pointer;
+}
+
+a.btn{
+    display: inline-block;
+    text-decoration: none;
+    width: 32px;
+    height: 28px;
+    text-align: center;
+    line-height: 30px;
 }
 
 .btn-dropdown{
@@ -116,10 +123,16 @@ img {
     text-align: center;
 }
 
-.customer-add-btn:hover {
+.customer-add-btn:hover, .customer-add-btn:hover{
     cursor: pointer;
     background-color: #a4e433;
     box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.customer-add-btn:active {
+    cursor: pointer;
+    background-color: #a4e433;
+    box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* Customer Form */
@@ -137,8 +150,9 @@ input[type=text], input[type=email] {
     box-sizing: border-box;
 }
 
-input[type=submit] {
-    width: 100%;
+button[type=submit] {
+    width: 150px;
+    float: right;
     padding: 14px 20px;
     margin: 20px 0;
     background-color: #2ecc71;
@@ -150,11 +164,17 @@ input[type=submit] {
 
     transition: background-color .3s;
 }
-
-input[type=submit]:hover,  input[type=submit]:focus{
-    background-color: #27ae60;
+button[type=submit] > i {
+    position: relative;
+    right: -10px;
 }
 
-input[type=submit]:hover {
-    background-color: #61b049;
+
+button[type=submit]:active{
+    background-color: #4dae4b !important;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .6) inset;
+}
+
+button[type=submit]:hover, button[type=submit]:focus {
+    background-color: #63be55;
 }

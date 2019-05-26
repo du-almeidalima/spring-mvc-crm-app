@@ -6,12 +6,16 @@
 
 <jsp:include page="../templates/header.jsp" />
 
-        <h1 class="page-title">Add Customer</h1>
+        <h1 class="page-title">Edit Customer</h1>
         <hr />
 
         <%-- We need to reference the modelAttribute that is being passed to this view in the form tag --%>
         <div class="app-container">
-            <form:form action="add-customer" modelAttribute="customer" method="post">
+            <form:form action="add-customer" modelAttribute="editCustomer" method="post">
+
+                <%-- Hidden form field to send customer ID --%>
+                <form:hidden path="id" />
+
                 <label for="fname">First Name</label>
                 <form:input path="firstName" type="text" id="fname" placeholder="Your name.." />
 

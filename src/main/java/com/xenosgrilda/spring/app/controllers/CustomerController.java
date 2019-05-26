@@ -5,10 +5,7 @@ import com.xenosgrilda.spring.app.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -51,6 +48,15 @@ public class CustomerController {
         }
 
         return "redirect:/customer/list";
+    }
+
+    @GetMapping("edit-customer-form")
+    public String editCustomerForm(@RequestParam(value = "customerId", required = true) int id, Model model){
+        // Getting customer from database and assigning it to model attribute
+        Customer customer = this.customerService.getCustomer(id);
+        model.addAttribute("editCustomer", customer);
+
+        return "customers/edit-customer-form";
     }
 }
 

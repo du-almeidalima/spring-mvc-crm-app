@@ -8,6 +8,8 @@ public interface CustomerDAO {
 
     List<Customer> getCustomers();
 
+    Customer getCustomer( int id);
+
     void saveCustomer(Customer customer);
 }
 

@@ -6,16 +6,15 @@ const ui = {
 };
 
 // Adding Event Listeners to UI Elements
-function loadEventListeners(){
-
-    ui.navItems.forEach(item => {
-        item.addEventListener("click", activeNavItem)
-    })
-
-}
+// function loadEventListeners(){
+//     ui.navItems.forEach(item => {
+//         item.addEventListener("click", activeNavItem)
+//     })
+//
+// }
 
 // Function to add active class to a navbar item depending on path
-function activeNavItem(event){
+function activeNavItem(){
 
     // Function variables
     const navItems = {
@@ -23,12 +22,12 @@ function activeNavItem(event){
         customer    : document.querySelector("#customer"),
         home        : document.querySelector("#home"),
         me          : document.querySelector("#me")
-    }
+    };
     const path = window.location.pathname.split("/");
 
     if (path[2] in navItems){
         navItems[path[2]].classList.add("nav-active");
     }
-};
+}
 
-document.addEventListener('DOMContentLoaded', loadEventListeners);
+window.addEventListener('DOMContentLoaded', activeNavItem);
