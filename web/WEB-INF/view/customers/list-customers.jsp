@@ -16,10 +16,6 @@
             <c:param name="customerId" value="${customer.id}" />
         </c:url>
 
-        <c:url var="deleteUrl" value="/customer/delete" >
-            <c:param name="customerId" value="${customer.id}" />
-        </c:url>
-
         <div class="customer">
             <div class="customer-header">
                 <button class="btn btn-dropdown">
@@ -33,10 +29,11 @@
                     <a role="button" href="${editUrl}" class="btn btn-edit">
                         <i class="fas fa-pencil-alt"></i>
                     </a>
-                    <a role="button" href="${deleteUrl}" class="btn btn-delete">
+                    <a role="button" href="#" class="btn btn-delete" data-id="${customer.id}">
                         <i class="fas fa-trash-alt"></i>
                     </a>
-            </div>
+
+                </div>
             </div>
             <div class="customer-body">
                 <div class="customer-body-content">
@@ -50,6 +47,16 @@
     <a href="${pageContext.request.contextPath}/customer/add-customer-form" class="customer-add-btn">
         <img src="https://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/2x/btw_ic_speeddial_white_24dp_2x.png" alt="+" />
     </a>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="modal-close-btn">&times;</span>
+            <p>Are you sure you want to delete?</p>
+        </div>
+
+        <a id="anchor-id" role="button" href="${pageContext.request.contextPath}/customer/delete">Delete</a>
+        <button id="modal-cancel-btn">Cancel</button>
+    </div>
 
     <script src="${pageContext.request.contextPath}/resources/static/js/customer.js"></script>
 <jsp:include page="../templates/footer.jsp" />

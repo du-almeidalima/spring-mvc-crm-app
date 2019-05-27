@@ -178,3 +178,42 @@ button[type=submit]:active{
 button[type=submit]:hover, button[type=submit]:focus {
     background-color: #63be55;
 }
+
+.modal{
+    display: none;
+
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(112, 112, 112, 0.604);
+    animation-name: modalOpen;
+    animation-duration: 0.75s;
+}
+
+.modal-content{
+    background-color: snow;
+    margin: 30% auto;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.modal-close-btn{
+    color: gray;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal-close-btn:hover, .modal-close-btn:focus{
+    color: black;
+}
+
+@keyframes modalOpen{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
