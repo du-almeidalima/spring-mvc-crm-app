@@ -1,6 +1,16 @@
-# IntelliJ
-.idea/
-out/
+# Eclipse
+.classpath
+.project
+.settings/
 
-# Sensitive information
-web/WEB-INF/dispatcher-servlet.xml
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/

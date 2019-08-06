@@ -1,6 +1,6 @@
-package com.xenosgrilda.spring.app.services;
+package com.xenosgrilda.app.services;
 
-import com.xenosgrilda.spring.app.models.Customer;
+import com.xenosgrilda.app.entities.Customer;
 
 import java.util.List;
 

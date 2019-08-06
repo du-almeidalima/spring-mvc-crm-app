@@ -1,4 +1,4 @@
-package com.xenosgrilda.spring.app.models;
+package com.xenosgrilda.app.entities;
 
 import javax.persistence.*;
 

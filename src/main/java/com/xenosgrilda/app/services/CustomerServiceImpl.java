@@ -1,7 +1,7 @@
-package com.xenosgrilda.spring.app.services;
+package com.xenosgrilda.app.services;
 
-import com.xenosgrilda.spring.app.dao.CustomerDAO;
-import com.xenosgrilda.spring.app.models.Customer;
+import com.xenosgrilda.app.dao.CustomerDAO;
+import com.xenosgrilda.app.entities.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

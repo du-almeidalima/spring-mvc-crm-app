@@ -1,6 +1,6 @@
-package com.xenosgrilda.spring.app.dao;
+package com.xenosgrilda.app.dao;
 
-import com.xenosgrilda.spring.app.models.Customer;
+import com.xenosgrilda.app.entities.Customer;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class CustomerDaoImpl implements CustomerDAO{
+public class CustomerDaoImpl implements CustomerDAO {
 
     // Injecting Hibernate session factory from dispatcher-servlet.xml
     @Autowired

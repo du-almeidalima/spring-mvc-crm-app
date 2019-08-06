@@ -1,7 +1,7 @@
-package com.xenosgrilda.spring.app.controllers;
+package com.xenosgrilda.app.controllers;
 
-import com.xenosgrilda.spring.app.models.Customer;
-import com.xenosgrilda.spring.app.services.CustomerService;
+import com.xenosgrilda.app.entities.Customer;
+import com.xenosgrilda.app.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +19,7 @@ public class CustomerController {
 
     @GetMapping("/list")
     public String listCustomers(Model model){
+        System.out.println("testing");
 
         // Getting customers from the Service
         List<Customer> customers = this.customerService.getCustomers();

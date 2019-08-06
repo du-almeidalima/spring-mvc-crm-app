@@ -1,6 +1,7 @@
-package com.xenosgrilda.spring.app.dao;
+package com.xenosgrilda.app.dao;
 
-import com.xenosgrilda.spring.app.models.Customer;
+
+import com.xenosgrilda.app.entities.Customer;
 
 import java.util.List;
 
@@ -8,7 +9,7 @@ public interface CustomerDAO {
 
     List<Customer> getCustomers();
 
-    Customer getCustomer( int id);
+    Customer getCustomer(int id);
 
     void saveCustomer(Customer customer);
 
